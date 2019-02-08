@@ -1,6 +1,6 @@
 {
   "name": "use-local-cache",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Hooks for caching various things in localstorage",
   "main": "index.js",
   "repository": "https://github.com/huntercaron/use-local-cache.git",
