@@ -3,8 +3,17 @@
 React hooks for using local storage as a cache.
 Intended for use in Framer X. 
 
-## API Usage
+## Usage
+### useCachedFetch
+`const [data, fetchNewData] = useCachedFetch(url);`
+Fetches data form a url, and stores it in the cache.
 
+`data` is the returned json data from the request. 
+It will read as null during the first time it loads while data is fetched, then update when the data is received. All subsequent times will use the cache.
+
+`fetchNewData` function will re-fetch the data from the url & update the data state.
+
+> By default `useCachedFetch` will fetch and update the local storage every time, but not update the data state. To automatically update the state when new data is fetched on page-load, pass `true` as the second parameter. (ex. `const [data, fetchNewData] = useCachedFetch(url, true);`
 
 
 ## Installation 
