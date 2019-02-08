@@ -4,8 +4,19 @@ React hooks for using local storage as a cache.
 Intended for use in Framer X. 
 
 ## Usage
+### useLocalCache
+`const [cacheValue, setCacheValue] = useLocalCache(key);`
+
+Essentially a hook wrapper for useState & localStorage. 
+Useful for storing state, json or strings in localstorage. Pass it any string to use as a storage key. (ex. `useLocalCache("colors")`.
+
+`cacheValue` is the string that is stored in the local cache.
+
+`setCacheValue` function will update cache and update the cacheValue state.
+
 ### useCachedFetch
 `const [data, fetchNewData] = useCachedFetch(url);`
+
 Fetches data form a url, and stores it in the cache.
 
 `data` is the returned json data from the request. 
