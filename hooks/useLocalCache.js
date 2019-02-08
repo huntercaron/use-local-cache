@@ -11,3 +11,5 @@ function useLocalCache(key) {
         setData(newData);
     }]
 }
+
+export { useLocalCache };
