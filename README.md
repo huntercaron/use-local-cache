@@ -9,21 +9,6 @@ Intended for use in Framer X.
 `yarn add use-local-cache`
 
 ## Usage
-### useLocalCache
-```js
-const [cacheValue, setCacheValue] = useLocalCache(key);
-```
-
-Essentially a hook wrapper for useState & localStorage. 
-Useful for storing state, json or strings in localstorage. Pass it any string to use as a storage key. (ex. `useLocalCache("colors")`.
-
-`cacheValue` is the string that is stored in the local cache.
-
-`setCacheValue` function will update cache and update the cacheValue state.
-
-#### Example Usage
-![](https://github.com/huntercaron/use-local-cache/blob/master/assets/useLocalCache.png)
-
 ### useCachedFetch
 ```js
 const [data, fetchNewData] = useCachedFetch(url);
@@ -41,6 +26,22 @@ It will read as null during the first time it loads while data is fetched, then 
 #### Example Usage
 ![](https://github.com/huntercaron/use-local-cache/blob/master/assets/useCachedFetch.png)
 
+### useLocalCache
+```js
+const [cacheValue, setCacheValue] = useLocalCache(key);
+```
+
+Essentially a hook wrapper for useState & localStorage. 
+Useful for storing state, json or strings in localstorage. Pass it any string to use as a storage key. (ex. `useLocalCache("colors")`.
+
+`cacheValue` is the string that is stored in the local cache.
+
+`setCacheValue` function will update cache and update the cacheValue state.
+
+#### Example Usage
+![](https://github.com/huntercaron/use-local-cache/blob/master/assets/useLocalCache.png)
+
+
 
 ## Thanks
 Thanks Henrique Gusso & Koen Bok for the idea and Patrick Burtchaell for  advising.
@@ -51,5 +52,6 @@ Inspired from [this fb thread](https://www.facebook.com/groups/framerjs/permalin
 ## To-do: 
 - [ ] useImageCache(arrOfImages)
 - [ ] write tests
+- [ ] comment the code
 
 > *Disclamer: This was created for prototyping in Framer X, and is most likely not suited for use on the web :)*
