@@ -1,14 +1,18 @@
 # useLocalCache
 
-React hooks for using local storage as a cache.
+A couple React hooks for using local storage as a cache.
 Intended for use in Framer X. 
+
+> I still have testing to do, so if anything isn't working please let me know or feel free to submit a pr :)
 
 ## Installation 
 `yarn add use-local-cache`
 
 ## Usage
 ### useLocalCache
-`const [cacheValue, setCacheValue] = useLocalCache(key);`
+```js
+const [cacheValue, setCacheValue] = useLocalCache(key);
+```
 
 Essentially a hook wrapper for useState & localStorage. 
 Useful for storing state, json or strings in localstorage. Pass it any string to use as a storage key. (ex. `useLocalCache("colors")`.
@@ -18,10 +22,12 @@ Useful for storing state, json or strings in localstorage. Pass it any string to
 `setCacheValue` function will update cache and update the cacheValue state.
 
 #### Example Usage
-
+![](https://github.com/huntercaron/use-local-cache/blob/master/assets/useLocalCache.png)
 
 ### useCachedFetch
-`const [data, fetchNewData] = useCachedFetch(url);`
+```js
+const [data, fetchNewData] = useCachedFetch(url);
+```
 
 Fetches data form a url, and stores it in the cache.
 
@@ -32,7 +38,8 @@ It will read as null during the first time it loads while data is fetched, then 
 
 > By default `useCachedFetch` will fetch and update the local storage every time, but not update the data state. To automatically update the state when new data is fetched on page-load, pass `true` as the second parameter. (ex. `const [data, fetchNewData] = useCachedFetch(url, true);`
 
-
+#### Example Usage
+![](https://github.com/huntercaron/use-local-cache/blob/master/assets/useCachedFetch.png)
 
 
 ## Thanks
@@ -42,7 +49,7 @@ Inspired from [this fb thread](https://www.facebook.com/groups/framerjs/permalin
 
 
 ## To-do: 
-- useImageCache(arrOfImages)
-- write tests
+- [ ] useImageCache(arrOfImages)
+- [ ] write tests
 
 > *Disclamer: This was created for prototyping in Framer X, and is most likely not suited for use on the web :)*
