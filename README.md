@@ -3,6 +3,8 @@
 React hooks for using local storage as a cache.
 Intended for use in Framer X. 
 
+> I still have testing to write for this, so if anything isn't working please let me know or feel free to submit a pr :)
+
 ## Installation 
 `yarn add use-local-cache`
 
