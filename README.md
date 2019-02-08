@@ -1,6 +1,6 @@
 # useLocalCache
 
-A couple React hooks for using local storage as a cache.
+A couple React hooks for using local storage as a cache. Created for use in Framer X.
 
 > I still have testing to do, so if anything isn't working please let me know or feel free to submit a pr :)
 
